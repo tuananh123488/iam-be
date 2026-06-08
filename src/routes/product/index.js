@@ -1,0 +1,12 @@
+"use strict";
+const express = require("express");
+const router = express.Router();
+const ProductController = require("../../controllers/product.controller");
+const authMiddleware = require("../../middleware/auth.middleware");
+const roleMiddleware = require("../../middleware/role.middleware");
+router.get("/getAll", ProductController.getAll);
+router.post("/insert", ProductController.insert);
+router.get("/getBySlug/:slug", ProductController.getBySlug);
+router.delete("/delete/:_id", ProductController.delete);
+router.put("/update", ProductController.update);
+module.exports = router;

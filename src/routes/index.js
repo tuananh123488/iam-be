@@ -1,0 +1,10 @@
+"use strict";
+const express = require("express");
+const router = express.Router();
+router.use("/product", require("./product"));
+router.use("/rental", require("./rental"));
+router.use("/payment", require("./payment"));
+router.use("/user", require("./user"));
+router.use("/auth", require("./auth"));
+router.use("/ai", require("./ai"));
+module.exports = router;
